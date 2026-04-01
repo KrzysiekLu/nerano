@@ -944,6 +944,14 @@ nav {
   .contact-section__legal,
   .contact-section__bank {
     text-align: center;
+    align-items: center;
+    padding-left: 0;
+  }
+  .contact-section__legal div {
+    justify-content: center;
+  }
+  .contact-section__bank {
+    align-items: center !important;
   }
 }
 
