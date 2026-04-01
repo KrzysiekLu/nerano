@@ -1335,6 +1335,10 @@ footer {
   }
   .card{
     width: 100%;
+    padding: 80px 0px 40px;
+  }
+  .card-content{
+    padding: 0 15px;
   }
   .card-image-wrapper{
     height: auto;
@@ -1342,8 +1346,17 @@ footer {
     max-width: 100%;
   }
   .hover-img{
-    max-width: 100%;
+    max-width: 85%;
   }
+  .grid{
+    gap: 80px;
+  }
+      .main-img{
+        right: 35px;
+      }
+          .card:nth-child(even) .main-img {
+            right: 85%;
+          }
 }
 
 @media (max-width: 992px) {
