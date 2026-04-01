@@ -1364,6 +1364,11 @@ footer {
   .jerry-story__badge-img {
     margin: var(--spacing-md) auto;
   }
+  .logo img{
+    max-width: 50%;
+    height: auto;
+    opacity: 1;
+  }
 }
 
 
