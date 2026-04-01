@@ -20,10 +20,12 @@
   --transition-bouncy: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-html {
+html,
+body {
   scroll-behavior: smooth;
   scroll-padding-top: 90px;
   overflow-x: hidden;
+  max-width: 100%;
 }
 
 * {
@@ -1365,10 +1367,15 @@ footer {
     margin: var(--spacing-md) auto;
   }
   .logo img{
-    max-width: 50%;
+    max-width: 70%;
     height: auto;
     opacity: 1;
   }
+  body{
+    padding-top: 60px;
+    
+  }
+  .hero-eyebrow{font-size: 0.6rem;}
 }
 
 
