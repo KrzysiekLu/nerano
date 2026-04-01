@@ -1333,6 +1333,17 @@ footer {
   .container .grid{
     padding: 0 15px;
   }
+  .card{
+    width: 100%;
+  }
+  .card-image-wrapper{
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+  }
+  .hover-img{
+    max-width: 100%;
+  }
 }
 
 @media (max-width: 992px) {
