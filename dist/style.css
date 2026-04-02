@@ -1225,7 +1225,6 @@ footer {
   flex-direction: column;
   align-self: stretch;
   min-height: 0;
-  overflow: hidden;
   max-height: 1300px;
 }
 
@@ -1238,7 +1237,6 @@ footer {
   flex: 1;
   height: 100%;
   min-height: 0;
-  overflow: hidden;
 }
 
 .jerry-thumb {
@@ -1283,6 +1281,10 @@ footer {
 .jerry-thumb:hover {
   border-color: var(--color-accent);
   transform: rotate(1.5deg) scale(1.02);
+}
+
+.jerry-thumb:nth-child(even):hover {
+  transform: rotate(-1.5deg) scale(1.02);
 }
 
 .jerry-thumb:hover img {
@@ -1343,7 +1345,8 @@ footer {
   }
   .card{
     width: 100%;
-    padding: 80px 0px 40px;
+    padding: 40px 0px 40px;
+    gap: 15px;
   }
   .card-content{
     padding: 0 15px;
@@ -1353,18 +1356,31 @@ footer {
     width: 100%;
     max-width: 100%;
   }
+  .card-content h3{
+    list-style: 1.3;
+  }
   .hover-img{
     max-width: 85%;
   }
   .grid{
-    gap: 80px;
+    gap: 80px !important;
   }
       .main-img{
-        right: 35px;
+        right: 60px;
       }
           .card:nth-child(even) .main-img {
-            right: 85%;
+            right: 82% !important;
           }
+  .hero p{
+    font-size: 1.2rem;
+  }
+  .hero h1 {
+    font-size: clamp(2.2rem, 8vw, 5rem);
+  }
+  .container h2{
+    line-height: 1.4;
+  }
+  
 }
 
 @media (max-width: 992px) {
