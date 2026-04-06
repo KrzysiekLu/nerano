@@ -123,6 +123,31 @@
       }
       lastScrollY = currentScrollY;
     }, { passive: true });
+
+    // Highlight "JERRY" in yellow across all visible text
+    (function highlightJerry(node) {
+      if (node.nodeType === Node.TEXT_NODE) {
+        if (/JERRY/.test(node.nodeValue)) {
+          const frag = document.createDocumentFragment();
+          node.nodeValue.split(/(JERRY)/g).forEach(part => {
+            if (part === 'JERRY') {
+              const span = document.createElement('span');
+              span.className = 'brand-jerry';
+              span.textContent = 'JERRY';
+              frag.appendChild(span);
+            } else {
+              frag.appendChild(document.createTextNode(part));
+            }
+          });
+          node.parentNode.replaceChild(frag, node);
+        }
+      } else if (
+        node.nodeType === Node.ELEMENT_NODE &&
+        !['SCRIPT', 'STYLE', 'A', 'INPUT', 'TEXTAREA'].includes(node.tagName)
+      ) {
+        Array.from(node.childNodes).forEach(highlightJerry);
+      }
+    })(document.body);
   });
 })();
 
