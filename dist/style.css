@@ -1233,8 +1233,8 @@ footer {
 /* Thumbnails grid */
 .jerry-story__thumbnails {
   display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: repeat(9, 1fr);
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: repeat(5, 1fr);
   gap: 15px;
   flex: 1;
   height: 100%;
@@ -1270,7 +1270,7 @@ footer {
   flex-shrink: 0;
   display: block;
   text-align: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
   font-weight: 700;
   color: var(--color-text-dark);
   background: var(--color-white);
