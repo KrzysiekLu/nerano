@@ -1,18 +1,13 @@
-// Language Detection and Redirection Logic
 (function() {
   const currentPath = window.location.pathname;
   const isEnglishPage = currentPath.endsWith('en.html');
   const isPolishPage = currentPath.endsWith('index.html') || currentPath.endsWith('/');
   const userLang = (navigator.language || navigator.userLanguage).toLowerCase();
 
-  // Check if browser preference suggests English
   const prefersEnglish = userLang.startsWith('en');
   
-  // Get language preference from localStorage (manually set by user)
   const savedLang = localStorage.getItem('user_lang_pref');
 
-  // REDIRECTION LOGIC:
-  // Only auto-redirect if the user hasn't explicitly chosen a language yet (savedLang is null)
   if (!savedLang) {
     if (prefersEnglish && !isEnglishPage) {
       window.location.href = 'en.html';
@@ -21,7 +16,6 @@
     }
   }
 
-  // Handle language switch clicks to persist choice and stop automatic redirection
   document.addEventListener('DOMContentLoaded', () => {
     document.querySelectorAll('.lang-switch a').forEach(link => {
       link.addEventListener('click', (e) => {
@@ -34,7 +28,6 @@
       });
     });
 
-    // Jerry Story accordion (mobile only ≤991px)
     document.querySelectorAll('.jerry-story__acc-btn').forEach(btn => {
       btn.addEventListener('click', () => {
         if (window.innerWidth > 991) return;
@@ -44,7 +37,6 @@
       });
     });
 
-    // Hamburger menu toggle
     const hamburger = document.querySelector('.hamburger');
     const navLinks = document.querySelector('.nav-links');
     if (hamburger && navLinks) {
@@ -62,11 +54,9 @@
       });
     }
 
-    // Dynamic year in footer
     const yearEl = document.getElementById('current-year');
     if(yearEl) yearEl.textContent = new Date().getFullYear();
 
-    // Smooth scroll for anchor links
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
       anchor.addEventListener('click', function(e) {
         e.preventDefault();
@@ -80,10 +70,9 @@
       });
     });
 
-    // Obsługa efektu reveal (centrum ekranu) na Mobile i Desktop
     const observerOptions = {
         root: null,
-        rootMargin: '-45% 0px -45% 0px', // Bardziej selektywne okno ( centralne 16% ekranu)
+        rootMargin: '-45% 0px -45% 0px',
         threshold: 0
     };
 
@@ -99,13 +88,11 @@
 
     document.querySelectorAll('.card').forEach(card => observer.observe(card));
 
-    // Auto-hide navbar on scroll down, reveal on scroll up or hover
     let lastScrollY = window.scrollY;
     const navHeader = document.querySelector('header');
     window.addEventListener('scroll', () => {
       const currentScrollY = window.scrollY;
 
-      // Zamknij mobile menu przy scrollowaniu
       if (navLinks && navLinks.classList.contains('is-open')) {
         navLinks.classList.remove('is-open');
         hamburger.classList.remove('is-open');
@@ -124,7 +111,6 @@
       lastScrollY = currentScrollY;
     }, { passive: true });
 
-    // Highlight "JERRY" in yellow across all visible text
     (function highlightJerry(node) {
       if (node.nodeType === Node.TEXT_NODE) {
         if (/JERRY/.test(node.nodeValue)) {

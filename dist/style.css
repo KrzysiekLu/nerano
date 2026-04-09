@@ -305,7 +305,7 @@ nav {
   top: 50%;
   right: -5%;
   transform: translateY(-50%);
-  opacity: 0.6; /* Zwiększona widoczność białego sygnetu */
+  opacity: 0.6; 
   pointer-events: none;
   z-index: 1;
   width: 70%;
@@ -402,11 +402,11 @@ nav {
 .hero h1 {
   font-size: clamp(2.5rem, 8vw, 5rem);
   margin-bottom: var(--spacing-md);
-  color: var(--color-vegan); /* Zielony nagłówek dla świeżości */
+  color: var(--color-vegan); 
   font-weight: 900;
   letter-spacing: -2px;
   line-height: 1.1;
-  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5); /* Lekkie rozświetlenie */
+  text-shadow: 2px 2px 0px rgba(255, 255, 255, 0.5); 
   animation: fadeInUp 1s ease-out;
 }
 
@@ -428,10 +428,10 @@ nav {
 .grid {
   display: flex !important;
   flex-direction: column !important;
-  gap: 120px !important; /* Wyraźna, duża przerwa między kafelkami */
+  gap: 120px !important; 
   max-width: 1200px;
   margin: 60px auto;
-  padding: 0 100px; /* Miejsce na wystające maskotki po bokach */
+  padding: 0 100px; 
 }
 
 .card {
@@ -1235,7 +1235,7 @@ footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(5, 1fr);
-  gap: 15px;
+  gap: 10px;
   flex: 1;
   height: 100%;
   min-height: 0;
@@ -1250,7 +1250,6 @@ footer {
   transition: border-color 0.25s, transform 0.25s, box-shadow 0.25s;
   text-decoration: none;
   min-height: 0;
-  max-width: 90%;
   margin: 0 auto;
   position: relative;
 }
