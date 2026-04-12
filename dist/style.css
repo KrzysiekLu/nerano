@@ -1,3 +1,45 @@
+@media (max-width: 992px) {
+  .jerry-story__thumbnails a:nth-child(2) img {
+    padding: 5px !important;
+    padding-bottom: 0 !important;
+  }
+}
+@media (max-width: 992px) {
+  .jerry-thumb__label--padding-mobile {
+    padding: 5px !important;
+  }
+}
+@media (max-width: 992px) {
+  .jerry-thumb__label--fullwidth-mobile {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+  }
+}
+@media (max-width: 992px) {
+  .jerry-thumb__label--center-mobile {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center !important;
+    justify-content: center !important;
+    text-align: center !important;
+    width: 100%;
+    margin: 0 auto !important;
+  }
+}
+@media (max-width: 992px) {
+  .jerry-thumb__label--center-mobile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+}
 :root {
   /* Colors - Fun & Professional Balance for Kids & Parents */
   --color-primary: #2A8346;    /* Lighter, softer Cocoa Brown */
@@ -1266,8 +1308,10 @@ footer {
 }
 
 .jerry-thumb__label {
+  
   flex-shrink: 0;
-  display: block;
+  display: flex;
+  align-items: center;
   text-align: center;
   font-size: 1rem;
   font-weight: 700;
